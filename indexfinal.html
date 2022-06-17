@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        h1,
+        h2 {
+            font-weight: 900;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+        text-align: center;
+        background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);           
+         }
+
+        h2 {
+            padding: 0 0 24px;
+        }
+		body {
+			background:url(https://images.unsplash.com/photo-1638742385167-96fc60e12f59?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232);
+		}
+        p{
+            text-align: center;
+            font-size: 50px;
+            color:lightseagreen;
+        }
+        img {
+            width: 400px; display: block; margin: 0 auto;
+        }
+        ul{
+            overflow:hidden; text-align: center; word-spacing: 5px; list-style-type: none;
+        }
+        li {
+            font-size: 40px;
+			color: goldenrod;
+        }
+        .checkin {
+			text-align: center;
+            display:block;
+            margin: 20px auto;
+            border: 5px;
+            border-radius: 100px;
+            box-shadow: 9px 9px 5px #123412;
+            color: black; 
+            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            font-size: 35px; 
+            transition: all 200ms ease;
+            cursor: pointer;
+                    }
+                      
+            .checkin:hover{
+                background: white;
+        color: #1a64d6;
+        border: 1px solid #1a64d6;            
+    }
+		.info {
+			text-align: center;
+			display:block;
+            margin: 50px auto;
+            border: 100px;
+            border-radius: 100px;
+            box-shadow: 9px 9px 5px #123412;
+            color: black; 
+            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            font-size: 40px; 
+            transition: all 200ms ease;
+            cursor: pointer;
+		}
+
+
+    </style>
+<title>Mental Health Check</title>
+<h1>Mental Health Check</h1>
+<h2>It is important to be kind to your mind🧠</h2>
+<body>
+    <p>
+        <em>
+            <strong>
+            How Are You Feeling Today?
+            </strong>
+        </em>
+    </p>
+    <img src="https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG1lbnRhbCUyMGhlYWx0aHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60">
+    <p>
+	Click "Check-In" and choose from the following three feelings:
+	</p>
+	<ul>
+        <li>
+        Great!
+    </li>
+    <li>
+        Okay
+    </li>
+    <li>
+        Not the Best
+    </li>
+    </ul>
+
+    <button class="checkin">
+        Check In
+    </button>
+    <hr>
+    <a href="https://www.mentalhealthishealth.us/"; class="info">For more information and resources, click here.</a>
+	</hr>
+<script>
+    function checkin() {
+        let emotion = prompt("How are you feeling today?");
+        let advice = prompt("What advice do you have for today?");
+        alert("Thank you for Checking-In")
+        let h1 = document.querySelector("p");
+        if (emotion === "great" || emotion === "okay") {
+            h1.innerHTML = ("🥳" + "You are feeling"  +  emotion  +  "today!");
+        } else {
+            h1.innerHTML = ("Be sure to try out some self-care tips! 🥰");
+        }
+    }
+    let checkinbutton = document.querySelector("button");
+
+    checkinbutton.addEventListener("click", checkin);
+</script>
+</body>
+</head>
